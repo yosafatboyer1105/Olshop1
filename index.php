@@ -1,5 +1,11 @@
 <?php
     include_once("function/helper.php"); 
+    
+    // konstanta
+    // variable url
+    // variable page
+    
+    $page = isset($_GET['page']) ? $_GET['page'] : false;
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +17,10 @@
 
     <link href=" <?php echo BASE_URL. "css/style.css"; ?>" type="text/css" rel="stylesheet"/>
 </head>
+
+<style>
+    <?php include "css/style.css" ?>
+</style>
 
 <body>
     <div id="container">
@@ -31,9 +41,23 @@
             </div>
         </div>
 
-        <div id="content"></div>
+        <div id="content">
+            <?php
+            $filename = "$page.php";
 
-        <div id="footer">Copyright @Olshop 2024</div>
+            if(file_exists($filename)) {
+                include_once($filename);
+            }
+            else {
+                echo "Maaf,file tersebut gaada";
+            }
+            
+            ?>
+        </div>
+
+        <div id="footer">
+            <p>Copyright Olshop 2024</p>
+        </div>
 
     </div>
 </body>

@@ -1,7 +1,109 @@
 body {
-    font-family:arial;
-    font-size:12px;
-    color: blue;
-    background: #E7E7E7;
-    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e5475;
+    font-size: 12px;
+    background: #e7e7e7;
+    margin: 0px;
+}
+
+#container {
+    width: 1100px;
+    height: auto;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+#container #header {
+    margin-top: 20px;
+}
+
+#container #header #menu {
+    background: #1e5475;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+#container #header #menu #user {
+    float: left;   
+}
+
+#container #header #menu #user a {
+    color: white;
+    padding-right: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#container #header #menu #cart-button {
+    float: right;
+    background: orange;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+
+#container #header #menu #cart-button img {
+    vertical-align: bottom;
+}
+
+#container #footer {
+    background: #1e5475;
+    padding: 10px;
+}
+
+#container #footer p {
+    color: white;
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+    margin: 0px;
+}
+
+#container #content {
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+/*css borderline between index page and register page*/
+
+#container-user-akses {
+    width: 350px;
+    height: auto;
+    margin: 50px auto;
+}
+
+.element-form {
+    margin-bottom: 15px;
+}
+
+.element-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.element-form span {
+    display: block;
+}
+
+.element-form span input[type="text"], 
+.element-form span input[type="password"],
+.element-form span textarea,
+.element-form span select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.element-form span input[type="submit"] {
+    background: #1e5475;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.element-form span input[type="submit"]:hover {
+    background: orange;
 }
