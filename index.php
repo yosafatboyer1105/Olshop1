@@ -1,4 +1,5 @@
 <?php
+    session_start(); 
     include_once("function/helper.php"); 
     
     // konstanta
@@ -6,6 +7,11 @@
     // variable page
     
     $page = isset($_GET['page']) ? $_GET['page'] : false;
+
+    // ternary to check whether there is user id session or not
+    $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false; 
+    $level = isset($_SESSION['level']) ? $_SESSION['level'] : false; 
+    $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false; 
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +37,19 @@
 
             <div id="menu">
                 <div id="user">
-                    <a href=" <?php echo BASE_URL. "index.php?page=login"; ?>">Login</a>
-                    <a href=" <?php echo BASE_URL. "index.php?page=register"; ?>">Register</a>
+                    <?php
+                        // if user is logged in
+                        if($user_id){
+                            echo "Hello, <b>$nama</b> | 
+                            <a href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=list'>My Profile</a> |
+                            <a href='".BASE_URL."logout.php'>Logout</a>";
+                        }
+                        // if user is not logged in or registered yet
+                        else {
+                            echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
+                                <a href='".BASE_URL."index.php?page=register'>Register</a>";
+                        }
+                        ?>
                 </div>
 
                 <a href=" <?php echo BASE_URL. "index.php?page=cart"; ?> " id="cart-button">  
@@ -49,7 +66,7 @@
                 include_once($filename);
             }
             else {
-                echo "Maaf,file tersebut gaada";
+                echo "Null";
             }
             
             ?>
