@@ -1,5 +1,6 @@
 <?php
     session_start(); 
+    include_once("function/connections.php"); 
     include_once("function/helper.php"); 
     
     // konstanta

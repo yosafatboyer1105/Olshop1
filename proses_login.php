@@ -3,7 +3,7 @@
     include_once("function/helper.php");
 
     // filling variable with value from front end that associated with POST method and element name as email and password
-    $email = $_POST['email']; 
+    $email = $_POST['email'];
     $password = md5($_POST['password']);
 
     // query to pull data from db
