@@ -1,6 +1,6 @@
 <?php
     session_start(); 
-    include_once("function/connections.php"); 
+    include_once("function/connections.php");
     include_once("function/helper.php"); 
     
     // konstanta
@@ -50,7 +50,7 @@
                             echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
                                 <a href='".BASE_URL."index.php?page=register'>Register</a>";
                         }
-                        ?>
+                    ?>
                 </div>
 
                 <a href=" <?php echo BASE_URL. "index.php?page=cart"; ?> " id="cart-button">  
@@ -69,14 +69,12 @@
             else {
                 echo "Null";
             }
-            
             ?>
         </div>
 
         <div id="footer">
             <p>Copyright Olshop 2024</p>
         </div>
-
     </div>
 </body>
 </html>
