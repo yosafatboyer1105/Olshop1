@@ -1,7 +1,5 @@
 <div id="frame-tambah">
-    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=form"; ?>"class"tombol-action">+ Tambah kategori produk</a>
-    <br>
-    <br>
+    <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=form"; ?>" class="tombol-action"> + Tambah kategori produk</a>
 </div>
 
 <?php
@@ -14,22 +12,23 @@
     // db product category check true (category exists)
     else {
         echo "<table class='table-list'>";
-        echo "<tr>
-            <th>No</th>
-            <th>Nama Kategori</th>
-            <th>Status</th>
-            <thAction</th>
+
+        echo "<tr class='row-title'>
+            <th class='kolom-nomor'>No</th>
+            <th class='kiri'>Kategori Produk</th>
+            <th class='tengah'>Status</th>
+            <th class='tengah'>Action</th>
         </tr>"; 
 
     $number = 1; 
     while($row = mysqli_fetch_assoc($queryKategoriProd)) {
         echo 
             "<tr>
-                <td>$number</td>
-                <td>$row[kategori]</td>
-                <td>$row[status]</td>
-                <td>
-                    <a href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit Data</a>
+                <td class='kolom-nomor'>$number</td>
+                <td class='kiri'>$row[kategori]</td>
+                <td class='tengah'>$row[status]</td>
+                <td class='tengah'>
+                    <a href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]' class='tombol-action'>Edit Data</a>
                 </td>
             </tr>";
         $number++;

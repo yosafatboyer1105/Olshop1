@@ -153,3 +153,58 @@ body {
     padding: 10px;
     background: white;
 }
+
+/* css borderline for product category table data sections */
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-list tr.row-title {
+    background: #e6e6e6;
+}
+
+.table-list tr th,
+.table-list tr td {
+    padding: 10px 7px;
+}
+
+.kolom-nomor {
+    width: 20px;
+    text-align: center;
+}
+
+.kiri {
+    text-align: left;
+}
+
+.tengah {
+    text-align: center;
+}
+
+.kanan {
+    text-align: right;
+}
+
+#frame-tambah {
+    margin-top: 6px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.tombol-action {
+    background: #1e5475;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;  
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 3px;
+    font-size: 11px;
+}
+
+.tombol-action:hover {
+    background: orange;
+}
+
