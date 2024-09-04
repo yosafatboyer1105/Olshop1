@@ -1,6 +1,6 @@
 <?php 
     include_once("../../function/connections.php"); 
-    include_once("../../function/helper.php"); 
+    include_once("../../function/helper.php");
 
     $kategori = $_POST['kategori'];
     $status = $_POST['status'];
@@ -8,7 +8,7 @@
 
     // add new product categories name (works)
     if($button == "Add"){
-        mysqli_query($connections, "INSERT INTO kategori (kategori, status) 
+        mysqli_query($connections, "INSERT INTO kategori (kategori, status)
         VALUES ('$kategori', '$status')");
     }
 
@@ -18,7 +18,7 @@
 
         mysqli_query($connections, "UPDATE kategori 
         SET kategori = '$kategori', status = '$status'
-        WHERE kategori_id = '1'");
+        WHERE kategori_id = '$kategori_id'");
     }
 
     // page redirect

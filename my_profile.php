@@ -20,6 +20,7 @@
             </li>
             <li>
                 <a <?php if($module == "kategori") { echo "class='active'"; } ?> 
+                    a <php
                     href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=list";?>">Kategori</a>
             </li>
             <li>

@@ -1,6 +1,6 @@
 <?php 
     // ternary operator to check whether we have kategori id values on the URL or not
-    $kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false; 
+    $kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;  
 
     // condition false
     $kategori = "";
